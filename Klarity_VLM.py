@@ -34,7 +34,7 @@ estimator = UncertaintyEstimator(
 uncertainty_processor = estimator.get_logits_processor()
 
 # Set up generation for the example
-image_path = "klarity_Experiment_1/Normal_dots.png"
+image_path = "dataset/Dots.png"
 question = "What do you see?"
 image = Image.open(image_path)
 
