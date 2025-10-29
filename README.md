@@ -23,8 +23,7 @@ For more detailed documentation on Klarity, visit the official repo: https://git
 
 
 ### Attention Heatmap
-The attention heatmap below illustrates how the model focuses on specific regions of the input image during token generation.
-
+The attention heatmap below illustrates how the model focuses on the two dots in the image.
 <p align="center"> <img src="results/attention_visualization.png" width="500"> </p>
 
 ## Quickstart & Usage
