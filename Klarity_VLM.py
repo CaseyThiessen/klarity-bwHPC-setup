@@ -24,8 +24,8 @@ estimator = UncertaintyEstimator(
     top_k=100,
     analyzer=EnhancedVLMAnalyzer(
         min_token_prob=0.01,
-        insight_model="together:meta-llama/Llama-Vision-Free",
-        insight_api_key="6f42d032b2c5b790ad77e5f13f68cd6392a77bf1c404ae16187cafae247c65bd",
+        insight_model="your together.ai model",
+        insight_api_key="your together.ai api key",
         vision_config=model.config.vision_config,
         use_cls_token=True
     ),
@@ -101,7 +101,7 @@ try:
             print(f"  {i}. {pred.token} (prob: {pred.probability:.4f})")
 
     # Define your output directory
-    output_dir = "/pfs/work9/workspace/scratch/ul_suh74-Pixtral/klarity_Experiment_2/results"
+    output_dir = "/your/path/for/results/goes/here"
     os.makedirs(output_dir, exist_ok=True)
 
     # Save comprehensive insight
