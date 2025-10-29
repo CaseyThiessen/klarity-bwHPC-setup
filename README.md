@@ -14,8 +14,10 @@ Klarity computes:
 For more detailed documentation on Klarity, visit the official repo: (https://github.com/klara-research/klarity)
 
 ## Example: Attention Visualization
-### Input Image & Prompt
-<table style="border: none; border-collapse: collapse;"> <tr> <td style="border: none; padding: 5px;"> <strong>Prompt:</strong> <em>What do you see?</em><br> <strong>Answer:</strong> <em>In the image provided, there are two distinct points — one red and one blue — located in the middle of a white background. The red point appears slightly closer to the blue point.</em> </td> <td style="border: none; padding: 5px;"> <img src="dataset/Dots.png" width="300"> </td> </tr> </table>
+### Prompt
+* Prompt:What do you see?
+* Answer:In the image provided, there are two distinct points — one red and one blue — located in the middle of a white background. The red point appears slightly closer to the blue point.
+
 
 ### Attention Heatmap
 The attention heatmap below illustrates how the model focuses on specific regions of the input image during token generation.
