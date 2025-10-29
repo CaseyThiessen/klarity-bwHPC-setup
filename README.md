@@ -11,7 +11,7 @@ Klarity computes:
 
 ⚠️ Note: Klarity requires a together.ai account. Running Klarity on models incurs usage costs. ⚠️
 
-For more detailed documentation on Klarity, visit the official repo: (https://github.com/klara-research/klarity)
+For more detailed documentation on Klarity, visit the official repo: https://github.com/klara-research/klarity
 
 ## Example: Attention Visualization
 ### Prompt
@@ -71,7 +71,7 @@ and replace the function with the following:
 Note: Update fixed_path to your desired output directory.
 
 #### 3. Setup together.ai 
-Go to (https://api.together.ai/) and create an account to obtain your API key.
+Go to https://api.together.ai/ and create an account to obtain your API key.
 
 ### 3. Configuration
 
