@@ -82,7 +82,7 @@ Edit the following fields in Klarity_VLM.py:
 * insight_api_key
 * image_path
 * question
-* output_path
+* output_dir
 
 Optional: You can also adjust parameters such as max_new_tokens or others within the same script.
 
