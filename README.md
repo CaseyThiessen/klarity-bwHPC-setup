@@ -9,7 +9,7 @@ Klarity computes:
 * Uncertainty & Entropy – measure model confidence
 * Semantic Clustering – detect patterns and anomalies
 
-⚠️ Note: Klarity requires a together.ai account. Running Klarity on models incurs usage costs.
+⚠️ Note: Klarity requires a together.ai account. Running Klarity on models incurs usage costs. ⚠️
 
 For more detailed documentation on Klarity, visit the official repo: (https://github.com/klara-research/klarity)
 
@@ -27,8 +27,7 @@ The attention heatmap below illustrates how the model focuses on specific region
 ## Quickstart & Usage
 ### 1. Environment Setup
 
-For usage on bwHPC, follow the environment setup instructions in the [Medical_Imaging repository](https://github.com/DeveloperNomis/Medical_Imaging).
-
+Follow the environment setup instructions in the [Medical_Imaging repository](https://github.com/DeveloperNomis/Medical_Imaging).
 
 After setting up your environment, install dependencies:
 ```bash
@@ -46,12 +45,12 @@ pip install git+https://github.com/klara-research/klarity.git
 
 Locate the Klarity installation directory (e.g.):
 ```bash
-/pfs/work9/workspace/scratch/username-workspace_name/conda/lib/python3.10/site-packages/klarity
+/path/to/your/conda/lib/python3.10/site-packages/klarity
 ```
 
 Ensure the schemas directory exists.
 
-In src/klarity/core/analyzer.py, go to line 648 (def _create_attention_visualization(...))
+In klarity/core/analyzer.py, go to: line 648 (def _create_attention_visualization(...))
 and replace the function with the following:
 ```bash
     def _create_attention_visualization(
@@ -71,8 +70,8 @@ and replace the function with the following:
 
 Note: Update fixed_path to your desired output directory.
 
-Go to https://api.together.ai/
- and create an account to obtain your API key.
+#### 3. Setup together.ai 
+Go to (https://api.together.ai/) and create an account to obtain your API key.
 
 ### 3. Configuration
 
