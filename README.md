@@ -1,6 +1,9 @@
 # Klarity on bwHPC
 ## Overview
 
+This repository provides a step-by-step guide on how to install, configure, and run Klarity on the bwHPC cluster.
+
+
 Klarity is a toolkit for inspecting AI decision-making processes.
 It provides intuitive and visual insights into how models reason about inputs.
 
