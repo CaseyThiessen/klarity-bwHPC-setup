@@ -86,7 +86,7 @@ Optional: You can also adjust parameters such as max_new_tokens or others within
 
 ### 4. Run the Attention Extraction
 
-Execute the main script to generate the visualization:
+Execute the main script to generate the attention output:
 ```bash
 python Klarity_VLM.py
 ```
