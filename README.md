@@ -43,7 +43,7 @@ pip install -r requirements.txt
 pip install git+https://github.com/klara-research/klarity.git
 ```
 
-#### 2.Manual Checks / Adjustments
+#### 2. Manual Checks / Adjustments
 
 Locate the Klarity installation directory (e.g.):
 ```bash
