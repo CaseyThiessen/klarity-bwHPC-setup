@@ -14,9 +14,9 @@ Klarity computes:
 For more detailed documentation on Klarity, visit the official repo: https://github.com/klara-research/klarity
 
 ## Example: Attention Visualization
-### Prompt
-* Prompt:What do you see?
-* Answer:In the image provided, there are two distinct points — one red and one blue — located in the middle of a white background. The red point appears slightly closer to the blue point.
+
+Prompt: What do you see?
+Answer: In the image provided, there are two distinct points — one red and one blue — located in the middle of a white background. The red point appears slightly closer to the blue point.
 
 
 ### Attention Heatmap
