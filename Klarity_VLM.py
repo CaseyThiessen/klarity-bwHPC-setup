@@ -1,11 +1,11 @@
-from transformers import AutoProcessor, LlavaOnevisionForConditionalGeneration, LogitsProcessorList
-from PIL import Image
-import torch
-from klarity import UncertaintyEstimator
-from klarity.core.analyzer import EnhancedVLMAnalyzer
 import os
 import json
+import torch
 import numpy as np
+from PIL import Image
+from klarity import UncertaintyEstimator
+from klarity.core.analyzer import EnhancedVLMAnalyzer
+from transformers import AutoProcessor, LlavaOnevisionForConditionalGeneration, LogitsProcessorList
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
@@ -34,7 +34,7 @@ estimator = UncertaintyEstimator(
 uncertainty_processor = estimator.get_logits_processor()
 
 # Set up generation for the example
-image_path = "klarity_Experiment_1/One_dot.png"
+image_path = "klarity_Experiment_1/Normal_dots.png"
 question = "What do you see?"
 image = Image.open(image_path)
 
@@ -100,31 +100,44 @@ try:
         for i, pred in enumerate(metrics.token_predictions[:3], 1):
             print(f"  {i}. {pred.token} (prob: {pred.probability:.4f})")
 
-    # Show comprehensive insight
-    output_path = "/pfs/work9/workspace/scratch/ul_suh74-Pixtral/klarity_Experiment_1/results/One_dot/overall_insight.json"
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    # Define your output directory
+    output_dir = "/pfs/work9/workspace/scratch/ul_suh74-Pixtral/klarity_Experiment_2/results"
+    os.makedirs(output_dir, exist_ok=True)
 
-    with open(output_path, "w") as f:
-      json.dump(result.overall_insight, f, indent=2)
-
-    print(f"\n? Comprehensive Analysis saved to {output_path}")
+    # Save comprehensive insight
+    overall_insight_path = os.path.join(output_dir, "overall_insight.json")
     
+    with open(overall_insight_path, "w") as f:
+        json.dump(result.overall_insight, f, indent=2)
+        
+    print(f"Comprehensive Analysis saved to {overall_insight_path}")
+
     # Get attention arrays
     cumulative_attention = result.attention_data.cumulative_attention
     token_attentions = result.attention_data.token_attentions
 
-    # Save cumulative attention array if it exists
+    # Save cumulative attention
     if cumulative_attention is not None:
-      np.save("/pfs/work9/workspace/scratch/ul_suh74-Pixtral/klarity_Experiment_1/results/One_dot/cumulative_attention.npy", cumulative_attention)
+        cumulative_attention_path = os.path.join(output_dir, "cumulative_attention.npy")
+        np.save(cumulative_attention_path, cumulative_attention)
+        print(f"Cumulative attention saved to {cumulative_attention_path}")
 
-    # Save each token attention grid as separate .npy files
-      if token_attentions:
+    # Save individual token attentions
+    if token_attentions:
         for idx, ta in enumerate(token_attentions):
-          token = ta["token"]
-          attention_grid = np.array(ta["attention_grid"])
-          filename = f"/pfs/work9/workspace/scratch/ul_suh74-Pixtral/klarity_Experiment_1/results/One_dot/attention_{idx}_{token}.npy"
-          np.save(filename, attention_grid)
+            token = ta["token"]
+            attention_grid = np.array(ta["attention_grid"])
 
+            # sanitize token for filename in case it has weird chars like "/" etc.
+            safe_token = str(token).replace("/", "_").replace("\\", "_").replace(" ", "_")
+
+            token_attention_path = os.path.join(
+                output_dir,
+                f"attention_{idx}_{safe_token}.npy"
+            )
+
+            np.save(token_attention_path, attention_grid)
+            print(f"Token attention for '{token}' saved to {token_attention_path}")
 
 except Exception as e:
     print(f"Error during generation: {str(e)}")
