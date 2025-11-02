@@ -1,31 +1,32 @@
 # Klarity on bwHPC
+![Python](https://img.shields.io/badge/Python-3.10.17-blue)
+![Klarity](https://img.shields.io/badge/Toolkit-Klarity-green)
+![together.ai](https://img.shields.io/badge/API-together.ai-orange)
+![GPU Required](https://img.shields.io/badge/GPU-Required-red)
+
 
 ## Table of Contents 
-1. Overview
-2. Example: Attention Visualization
-3. Quickstart & Usage
-     1. Environment Setup
-     2. Klarity Installation
-        1. Install Klarity directly from GitHub
-        2. Manual Checks / Adjustments
-     3. Setup together.ai
-     4. Configuration
-     5. Run the Attention Extraction
-4. Limitations 
-5. Notes & Acknowledgements?  
+1. [Overview](#1-overview)
+2. [Example: Attention Visualization](#2-example-attention-visualization)
+3. [Quickstart & Usage](#3-quickstart--usage)
+   1. [Environment Setup](#1-environment-setup)
+   2. [Klarity Installation](#2-klarity-installation)
+   3. [Setup together.ai](#3-setup-togetherai)
+   4. [Configuration](#4-configuration)
+   5. [Run the Attention Extraction](#5-run-the-attention-extraction) 
 
 ## 1. Overview
 
-This repository provides a step-by-step guide on how to install, configure, and run Klarity on the bwHPC cluster.
-
+This repository provides a step-by-step guide for installing, configuring, and running **Klarity** on the **bwHPC cluster**.
 
 Klarity is a toolkit for inspecting AI decision-making processes.
 It provides intuitive and visual insights into how models reason about inputs.
 
-Klarity computes:
-* Attention & Visual Alignment Maps – visualize where models focus
-* Uncertainty & Entropy – measure model confidence
-* Semantic Clustering – detect patterns and anomalies
+Klarity features:
+* **Attention & Visual Alignment Maps** – visualize where models focus
+* **Uncertainty & Entropy** – measure model confidence
+* **Semantic Clustering** – detect patterns and anomalies
+
 
 ⚠️ Note: Klarity requires a together.ai account. Running Klarity on models incurs usage costs. ⚠️
 
@@ -33,8 +34,11 @@ For more detailed documentation on Klarity, visit the official repo: https://git
 
 ## 2. Example: Attention Visualization
 
-* Prompt: What do you see?
-* Answer: In the image provided, there are two distinct points, one red and one blue, located in the middle of a white background. The red point appears slightly closer to the blue point.
+**Prompt:**  
+> *What do you see?*
+
+**Model Answer:**  
+> In the image provided, there are two distinct points — one red and one blue — located in the middle of a white background. The red point appears slightly closer to the blue point.
 
 
 ### Attention Heatmap
@@ -92,14 +96,17 @@ Go to https://api.together.ai/ and create an account to obtain your API key. Tak
 
 #### 4. Configuration
 
-Edit the following fields in Klarity_VLM.py:
-* insight_model
-* insight_api_key
-* image_path
-* question
-* output_dir
+In `Klarity_VLM.py`, edit the following fields:
 
-Optional: You can also adjust parameters, such as max_new_tokens or others within the same script.
+| **Field**           | **Description** |
+|----------------------|-----------------|
+| `insight_model`      | Model name used for Klarity |
+| `insight_api_key`    | Your together.ai API key |
+| `image_path`         | Path to the input image |
+| `question`           | Model query or prompt |
+| `output_dir`         | Directory to save results |
+
+*Optional:* You can also adjust parameters such as `max_new_tokens` or others within the same script.
 
 #### 5. Run the Attention Extraction
 
@@ -108,18 +115,12 @@ Execute the main script to generate the attention output:
 python Klarity_VLM.py
 ```
 
-### 4 Limitations 
-
-#### 1. Partnered with Together AI Cloud Platform 
-* Generates usage costs 
-* Full access requires a subscription 
-#### 2. Ambiguous output 
-
-
-### Notes & Acknowledgements
-do we need this section to say we did this at uni ulm, or mention daniel or something? 
-
 
 <p align="center">
   <i>Thanks for visiting! Contributions and stars are always welcome ⭐</i>
 </p>
+
+
+
+
+
