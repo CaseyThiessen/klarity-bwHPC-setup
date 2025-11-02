@@ -45,9 +45,12 @@ For more detailed documentation on Klarity, visit the official repo: https://git
 The attention heatmap below illustrates how the model focuses on the two dots in the image.
 
 
-<p align="center" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+<p 
+</kbd>
+   align="center" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
   <img src="results/o_I.png" width="45%" style="border: 10px solid  grey; border-radius: 30px; padding: 10px;">
   <img src="results/C_A_H.png" width="45%" style="border: 10px solid grey; border-radius: 30px; padding: 4px;">
+</kbd>
 </p>
 
 ## 3. Quickstart & Usage
