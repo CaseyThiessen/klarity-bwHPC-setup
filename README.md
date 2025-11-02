@@ -43,9 +43,17 @@ For more detailed documentation on Klarity, visit the official repo: https://git
 
 ### Attention Heatmap
 The attention heatmap below illustrates how the model focuses on the two dots in the image.
+
 <p align="center" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-  <img src="results/o_I.png" width="45%" style="border: 1px solid #ccc; border-radius: 10px; padding: 4px;">
-  <img src="results/C_A_H.png" width="45%" style="border: 1px solid #ccc; border-radius: 10px; padding: 4px;">
+
+  <div style="border: 2px solid #aaa; border-radius: 10px; background-color: #f9f9f9; padding: 6px; display: inline-block;">
+    <img src="results/o_I.png" width="350" alt="Original Image">
+  </div>
+
+  <div style="border: 2px solid #aaa; border-radius: 10px; background-color: #f9f9f9; padding: 6px; display: inline-block;">
+    <img src="results/C_A_H.png" width="350" alt="Computed Attention Heatmap">
+  </div>
+
 </p>
 
 ## 3. Quickstart & Usage
