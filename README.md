@@ -38,19 +38,13 @@ For more detailed documentation on Klarity, visit the official repo: https://git
 > *What do you see?*
 
 **Model Answer:**  
-> In the image provided, there are two distinct points — one red and one blue — located in the middle of a white background. The red point appears slightly closer to the blue point.
+> In the image provided, there are two distinct points, one red and one blue, located in the middle of a white background. The red point appears slightly closer to the blue point.
 
 
 ### Attention Heatmap
 The attention heatmap below illustrates how the model focuses on the two dots in the image.
-
 <p align="center">
-  <table cellspacing="0" cellpadding="0">
-    <tr>
-      <td><img src="results/o_I.png" width="45%"></td>
-      <td><img src="results/C_A_H.png" width="45%"></td>
-    </tr>
-  </table>
+  <table cellspacing="0" cellpadding="0"><tr><td><img src="results/o_I.png" width="45%"></td><td><img src="results/C_A_H.png" width="45%"></td></tr></table>
 </p>
 
 
