@@ -75,7 +75,7 @@ Locate the Klarity installation directory (e.g.):
 /path/to/your/conda/lib/python3.10/site-packages/klarity
 ```
 
-Ensure the schemas directory exists.
+⚠ Ensure the schemas directory was installed. ⚠
 
 In klarity/core/analyzer.py, go to: line 648 (def _create_attention_visualization(...))
 and replace the function with the following:
