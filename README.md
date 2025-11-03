@@ -44,7 +44,10 @@ For more detailed documentation on Klarity, visit the official repo: https://git
 ### Attention Heatmap
 The attention heatmap below illustrates how the model focuses on the two dots in the image.
 <p align="center">
-  <table cellspacing="0" cellpadding="0"><tr><td><img src="results/o_I.png" width="45%"></td><td><img src="results/C_A_H.png" width="45%"></td></tr></table>
+  <img src="results/o_I_with_boarders.png" width="45%" />
+</p>
+<p align="center">
+  <img src="results/C_A_H.png" width="45%" />
 </p>
 
 
