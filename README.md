@@ -43,12 +43,16 @@ For more detailed documentation on Klarity, visit the official repo: https://git
 
 ### Attention Heatmap
 The attention heatmap below illustrates how the model focuses on the two dots in the image.
+
 <p align="center">
   <img src="results/o_I_with_boarders.png" width="45%" />
 </p>
 <p align="center">
   <img src="results/C_A_H.png" width="45%" />
 </p>
+
+The original output represents a concatenation of both images and is available in the `results` directory under `attention_visualisation.png`. 
+The black border and the division into two separate images were applied solely for clarity in the GitHub presentation and are not part of the original input and output image.
 
 
 ## 3. Quickstart & Usage
