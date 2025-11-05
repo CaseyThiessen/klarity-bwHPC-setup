@@ -63,10 +63,10 @@ To get started on the bwHPC cluster, follow the setup guide below. It walks thro
 
 You can also find a helpful configuration example and background information here:
 * [Medical Imaging Repository](https://github.com/DeveloperNomis/Medical_Imaging)
-*  includes an example setup for running the Pixtral-12B model on the bwHPC.
+  * includes an example setup for running the Pixtral-12B model on the bwHPC.
 
 * [bwHPC Wiki](https://wiki.bwhpc.de/e/Main_Page)
-*  official documentation with detailed system and usage instructions.
+  * official documentation with detailed system and usage instructions.
 
 After setting up your environment, install dependencies:
 ```bash
