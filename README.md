@@ -58,16 +58,15 @@ The black border and the division into two separate images were applied solely f
 ## 3. Quickstart & Usage
 ### 1. Environment Setup
 
-To get started on the bwHPC cluster, follow the setup guide below. It walks through account registration, environment configuration, and essential tools for running jobs:
+To get started on the bwHPC cluster, follow the setup guide below. It walks through account registration, environment configuration, and how to run jobs on the cluster:
 [BW Cluster Public](https://whip-seat-6cf.notion.site/BW-Cluster-Public-27819702d1364bc08b5c888217ff676b)
 
-You can also find helpful configuration example and background information here:
+You can also find a helpful configuration example and background information here:
+* [Medical Imaging Repository](https://github.com/DeveloperNomis/Medical_Imaging)
+*  includes an example setup for running the Pixtral-12B model on the bwHPC.
 
-[Medical Imaging Repository](https://github.com/DeveloperNomis/Medical_Imaging)
- – includes an example setup for running the Pixtral-12B model on the bwHPC.
-
-[bwHPC Wiki](https://wiki.bwhpc.de/e/Main_Page)
- – official documentation with detailed system and usage instructions.
+* [bwHPC Wiki](https://wiki.bwhpc.de/e/Main_Page)
+*  official documentation with detailed system and usage instructions.
 
 After setting up your environment, install dependencies:
 ```bash
